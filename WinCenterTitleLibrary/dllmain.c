@@ -238,8 +238,7 @@ typedef enum _ACCENT {							// Values passed to SetWindowCompositionAttribute d
     ACCENT_ENABLE_GRADIENT = 1,					// Use a solid color specified by nColor. This mode ignores the alpha value and is fully opaque.
     ACCENT_ENABLE_TRANSPARENTGRADIENT = 2,		// Use a tinted transparent overlay. nColor is the tint color.
     ACCENT_ENABLE_BLURBEHIND = 3,				// Use a tinted blurry overlay. nColor is the tint color.
-    ACCENT_ENABLE_ACRYLICBLURBEHIND = 4,					// Use an aspect similar to Fluent design. nColor is tint color. This mode bugs if the alpha value is 0.
-
+   
     ACCENT_NORMAL = 150							// (Fake value) Emulate regular taskbar appearance
 } ACCENT;
 

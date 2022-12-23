@@ -1,6 +1,7 @@
 # WinCenterTitle
 WinCenterTitle is a simple tool that allows you to center align the text in Windows 10 titlebars, the same way it was in Windows 8, 8.1, or even 3.1.
 
+Note：Application requires active Internet connection when downloading symbol files for uDWM.dll
 
 ## Installation
 

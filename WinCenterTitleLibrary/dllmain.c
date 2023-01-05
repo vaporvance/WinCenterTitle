@@ -62,7 +62,7 @@
 
 #define ENTIRE_TITLEBAR                             10000
 
-#define TITLEBARS_WHITE_DEFAULT                     1
+#define TITLEBARS_WHITE_DEFAULT                     0
 #define TITLEBARS_COLORED                           0
 #define TITLEBARS_DESIRED_COLOR                     TITLEBARS_WHITE_DEFAULT
 
@@ -246,7 +246,6 @@ typedef struct _ACCENTPOLICY				// Determines how a window's transparent region 
 {
     ACCENT   nAccentState;			// Appearance
     int32_t  nFlags;				// Nobody knows how this value works
-    uint32_t nColor;				// A color in the hex format AABBGGRR
     int32_t  nAnimationId;			// Nobody knows how this value works
 } ACCENTPOLICY;
 
@@ -271,8 +270,7 @@ int64_t CAccentUpdateAccentPolicyHook(
 
     policy->nAccentState = ACCENT_ENABLE_BLURBEHIND;
     policy->nFlags = 0x2; //0xE2; // CAccent::UpdateLayout 0xE0
-    policy->nColor = 0x80efdead;
-
+    
     RECT rc = *rect;
     //rect->right -= 11;
     //rect->bottom -= 11;

@@ -59,7 +59,7 @@ Steps:
 1. Clone git repo along with all submodules
 
    ```
-   git clone --recursive https://github.com/valinet/WinCenterTitle
+   git clone --recursive https://github.com/dkjnsdvsodvnosdvm/WinCenterTitle
    ```
 
    If "git" is not found as a command, type its full path, or have its folder added to PATH, or open Git command window in the respective folder if using Git for Windows.

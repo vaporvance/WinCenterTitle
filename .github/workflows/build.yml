@@ -32,7 +32,17 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: nuget restore ${{env.SOLUTION_FILE_PATH}}
 
-    - name: Build
+    - name: Build funchook
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: |
+           cd libs 
+           cd funchook
+           md build
+           cd build
+           cmake -G "Visual Studio 16 2019" -A x64 ..
+           cmake --build . --config Releasecmake --build .\libs\funchook --config Release
+
+    - name: Build WinCenterTitle
       working-directory: ${{env.GITHUB_WORKSPACE}}
       # Add additional options to the MSBuild command line here (like platform or verbosity level).
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference

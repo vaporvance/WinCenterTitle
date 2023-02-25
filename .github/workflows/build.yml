@@ -35,8 +35,7 @@ jobs:
     - name: Build funchook
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
-           cd libs 
-           cd funchook
+           cd .\libs\funchook 
            md build
            cd build
            dir

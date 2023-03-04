@@ -34,7 +34,7 @@ This means that all regular windows will have their title bar text centered. Cus
 
 ### Overview
 
-![image](https://github.com/dkjnsdvsodvnosdvm/WinCenterTitle/blob/glass/AeroGlass.png)
+![image](https://github.com/dkjnsdvsodvnosdvm/WinCenterTitle/blob/glass/Photo/AeroGlass.png)
 
 ## License
 

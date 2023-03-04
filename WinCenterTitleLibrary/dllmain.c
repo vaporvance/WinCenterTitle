@@ -56,8 +56,8 @@
 #define TEXT_COLOR                                  RGB(0, 0, 0)
 #undef  TEXT_COLOR
 
-#define APPLICATION_ICON_SHOWN                      1
-#define APPLICATION_ICON_HIDDEN                     0
+#define APPLICATION_ICON_SHOWN                      0
+#define APPLICATION_ICON_HIDDEN                     1
 #define APPLICATION_ICON_VISIBILITY                 APPLICATION_ICON_HIDDEN
 
 #define ENTIRE_TITLEBAR                             10000
@@ -491,11 +491,11 @@ static int64_t(*CTextUpdateAlignmentTransformFunc)(
     void* _this
     );
 
-static int64_t(*CTextValidateResourcesFuncW10)(
+static int64_t(*CTextValidateResourcesFunc)(
     void* _this
     );
 HDC ghdc = 0;
-int64_t CTextValidateResourcesHookW10(
+int64_t CTextValidateResourcesHook(
     void* _this
 )
 {
@@ -509,7 +509,7 @@ int64_t CTextValidateResourcesHookW10(
     // CText::ValidateResources - CText::UpdateAlignmentTransform
     g_CTextInstance = _this;
     // call original function
-    rv = CTextValidateResourcesFuncW10(_this);
+    rv = CTextValidateResourcesFunc(_this);
     // we need this hack so that we trick DWM into triggering an update of the
     // title label at each resize, as now the title is centered so its
     // position should change when the size of the window changes;
@@ -1305,14 +1305,14 @@ __declspec(dllexport) DWORD WINAPI main(
                     return rv;
                 }
 
-                CTextValidateResourcesFuncW10 = (int64_t(*)(void*))(
+                CTextValidateResourcesFunc = (int64_t(*)(void*))(
                     (uintptr_t)hudwm +
                     (uintptr_t)addresses[3]
                     );
                 rv = funchook_prepare(
                     funchook,
-                    (void**)&CTextValidateResourcesFuncW10,
-                    CTextValidateResourcesHookW10
+                    (void**)&CTextValidateResourcesFunc,
+                    CTextValidateResourcesHook
                 );
                 if (rv != 0)
                 {

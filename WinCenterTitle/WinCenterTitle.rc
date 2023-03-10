@@ -69,7 +69,7 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "VALINET Solutions SRL"
             VALUE "FileDescription", "WinCenterTitle Daemon"
-            VALUE "FileVersion", "1.1.1.0"
+            VALUE "FileVersion", "1.1.0.0"
             VALUE "InternalName", "WinCenterTitle.exe"
             VALUE "LegalCopyright", "Copyright (C) 2020 VALINET Solutions SRL"
             VALUE "OriginalFilename", "WinCenterTitle.exe"

@@ -515,7 +515,7 @@ int64_t CTextValidateResourcesHook(
     // label based on a check of whether the label size exceeded the window
     // size; so, by setting the label size to a very large value, DWM is
     // tricked into thinking the overflow is always happening
-    val = ((DWORD*)g_CTextInstance + 100);
+    val = ((DWORD*)g_CTextInstance + 102);
     if (*val < ENTIRE_TITLEBAR)
     {
         *val += ENTIRE_TITLEBAR;
@@ -545,20 +545,20 @@ int64_t CMatrixTransformProxyUpdateHook(
     if (g_CTextInstance)
     {
         // this is the width of the title bar label containing the text
-        double v1 = *((DWORD*)g_CTextInstance + 100);
+        double v1 = *((DWORD*)g_CTextInstance + 102);
         // this is the size available for the label (the size between the
         // window icon, or the left window margin, and the caption buttons, or the
         // right window margin)
-        double v3 = *((DWORD*)g_CTextInstance + 30);
+        double v3 = *((DWORD*)g_CTextInstance + 32);
         // this is the height of the titlebar text (UNUSED)
-        double v4 = *((DWORD*)g_CTextInstance + 31);
+        double v4 = *((DWORD*)g_CTextInstance + 33);
         // the following have been found out by analyzing the function
         // UpdateNCAreaPositionsAndSizes
         // this is the width of the window icon
-        double v6 = *((DWORD*)g_CTextInstance + 32);
+        double v6 = *((DWORD*)g_CTextInstance + 34);
         // this is the width of the window caption buttons (for example,
         // Close, Minimize, Maximize etc)
-        double v5 = *((DWORD*)g_CTextInstance + 33);
+        double v5 = *((DWORD*)g_CTextInstance + 35);
         // this also contains the width and height:
         // tagSIZE st = *((tagSIZE*)g_CTextInstance + 15);
         // where tagSIZE is a struct of 2 LONGs (width, and height)

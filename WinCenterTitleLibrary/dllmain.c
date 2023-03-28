@@ -62,7 +62,7 @@
 
 #define ENTIRE_TITLEBAR                             10000
 
-#define TITLEBARS_WHITE_DEFAULT                     0
+#define TITLEBARS_WHITE_DEFAULT                     1
 #define TITLEBARS_COLORED                           0
 #define TITLEBARS_DESIRED_COLOR                     TITLEBARS_WHITE_DEFAULT
 

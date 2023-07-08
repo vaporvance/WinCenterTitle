@@ -8,18 +8,6 @@
 #include <Uxtheme.h>
 #pragma comment(lib, "Uxtheme.lib")
 
-#define DEBUG TRUE
-// https://stackoverflow.com/questions/1644868/define-macro-for-debug-printing-in-c
-#if DEBUG
-#define TRACE(fmt, ...) \
-        do { if (DEBUG) fprintf(stderr, "%s:%d:%s(): " fmt, __FILE__, \
-                                __LINE__, __func__, __VA_ARGS__); } while (0)
-#else
-#define TRACE(x)
-#endif
-
-#define MAX(X, Y) (((X) > (Y)) ? (X) : (Y))
-
 #define MARGIN_OVERHANG_WIDTH_FIX                   2
 #define AERO_COLOR_OFFSET                           0x19
 #define NUMBER_OF_REQUESTED_SYMBOLS_WINDOWS10       15

@@ -1,10 +1,7 @@
 name: Build
 
 on:
-  push:
-    branches: [ "glass" ]
-  pull_request:
-    branches: [ "glass" ]
+  workflow_dispatch:
 
 env:
   # Path to the solution file relative to the root of the project.
